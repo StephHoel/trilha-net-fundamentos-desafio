@@ -6,6 +6,18 @@ namespace DesafioFundamentos.Models
         private readonly decimal precoPorHora = 0;
         private readonly List<string> veiculos = new();
 
+        public decimal GetPrecoInicial(){
+            return this.precoInicial;
+        }
+
+        public decimal GetPrecoPorHora(){
+            return this.precoPorHora;
+        }
+
+        public List<string> GetVeiculos(){
+            return veiculos;
+        }
+
         public Estacionamento(decimal precoInicial, decimal precoPorHora)
         {
             this.precoInicial = precoInicial;
@@ -16,7 +28,6 @@ namespace DesafioFundamentos.Models
         {
             Console.Write("Digite a placa do veículo para estacionar: ");
             this.veiculos.Add(ReadLine());
-
         }
 
         public void RemoverVeiculo()
